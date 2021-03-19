@@ -6,14 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
-import android.view.LayoutInflater
-import android.view.View
+import android.view.*
 import android.view.View.inflate
-import android.view.Window
-import android.view.WindowManager
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.textfield.TextInputEditText
+import java.util.zip.Inflater
 
 class MainActivity : AppCompatActivity() {
 private lateinit var addfloat: FloatingActionButton
@@ -37,6 +36,12 @@ private lateinit var addfloat: FloatingActionButton
         rootLayout = findViewById(R.id.root)
         addfloat = findViewById(R.id.add_user_float)
         Recycler = findViewById(R.id.recycler)
+
+
+
+
+
+
 
         val adapter = ListAdapter()
         Recycler.adapter = adapter

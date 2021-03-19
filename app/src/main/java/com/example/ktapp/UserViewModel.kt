@@ -22,4 +22,9 @@ class UserViewModel(application: Application):AndroidViewModel(application) {
             repository.addUser(user)
         }
     }
+    fun upDateData(user: User){
+        viewModelScope.launch {
+            repository.upDateData(user)
+        }
+    }
 }

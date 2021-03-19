@@ -9,51 +9,48 @@
         android:layout_width="match_parent"
         android:background="#0A15DA"
         android:layout_height="wrap_content">
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_margin="@dimen/_10sdp"
-        android:gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ADD USER"
-        android:textColor="@color/white"
-        />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD USER"
+            android:textColor="@color/white"
+            />
     </LinearLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:hint="enter firstname"
-
         android:layout_height="wrap_content">
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/fname"
-        android:layout_margin="@dimen/_10sdp"
-        />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fname"
+            android:layout_margin="@dimen/_10sdp"
+            />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
         android:hint="enter Lastname"
-        android:layout_height="wrap_content">
-    <com.google.android.material.textfield.TextInputEditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:id="@+id/lname"
-        android:layout_margin="@dimen/_10sdp"
-        />
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lname"
+            android:layout_margin="@dimen/_10sdp"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:hint="enter Age"
-
         android:layout_height="wrap_content">
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/age"
-        android:layout_margin="@dimen/_10sdp"
-        />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/age"
+            android:layout_margin="@dimen/_10sdp"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -61,7 +58,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SUBMIT"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_margin="@dimen/_10sdp"
         android:id="@+id/submit"
         />
