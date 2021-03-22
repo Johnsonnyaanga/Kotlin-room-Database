@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/add2"
-        android:name="com.example.ktapp.Add"
+        android:name="com.example.ktapp.fragments.Add"
         android:label="ADD USER"
         tools:layout="@layout/add_user" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.example.ktapp.ListFragment"
+        android:name="com.example.ktapp.fragments.ListFragment"
         android:label="LIST"
         tools:layout="@layout/fragment_list" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/updatefragment"
-        android:name="com.example.ktapp.updatefragment"
+        android:name="com.example.ktapp.fragments.updatefragment"
         android:label="UPDATE USER"
         tools:layout="@layout/fragment_updatefragment" >
         <action
@@ -36,6 +36,6 @@
             app:destination="@id/listFragment" />
         <argument
             android:name="currentUser"
-            app:argType="com.example.ktapp.User" />
+            app:argType="com.example.ktapp.models.User" />
     </fragment>
 </navigation>

@@ -1,21 +1,15 @@
-package com.example.ktapp
+package com.example.ktapp.Adapters
 
-import android.app.AlertDialog
-import android.content.Context
-import android.text.Editable
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.fragment.app.ListFragment
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelStoreOwner
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.textfield.TextInputEditText
+import com.example.ktapp.fragments.ListFragmentDirections
+import com.example.ktapp.R
+import com.example.ktapp.models.User
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 

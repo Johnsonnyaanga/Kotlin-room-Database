@@ -1,4 +1,4 @@
-package com.example.ktapp
+package com.example.ktapp.models
 
 import android.os.Parcelable
 import androidx.room.Entity

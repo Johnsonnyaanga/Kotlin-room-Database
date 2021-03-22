@@ -1,7 +1,8 @@
-package com.example.ktapp
+package com.example.ktapp.Room
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.ktapp.models.User
 
 @Dao
 interface UserDao {

@@ -1,4 +1,4 @@
-package com.example.ktapp
+package com.example.ktapp.fragments
 
 import android.os.Bundle
 import android.text.Editable
@@ -9,12 +9,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import com.example.ktapp.R
+import com.example.ktapp.ViewModels.UserViewModel
+import com.example.ktapp.models.User
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 
 
 class Add : Fragment() {
-    private lateinit var mUserViewModel:UserViewModel
+    private lateinit var mUserViewModel: UserViewModel
 
 
     override fun onCreateView(

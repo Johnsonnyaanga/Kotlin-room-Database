@@ -1,10 +1,10 @@
-package com.example.ktapp
+package com.example.ktapp.Room
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
-import androidx.room.Room.databaseBuilder
 import androidx.room.RoomDatabase
+import com.example.ktapp.models.User
 
 @Database(entities = [User::class],version = 1,exportSchema = false)
 abstract class UserDatabase: RoomDatabase() {
@@ -12,9 +12,9 @@ abstract class UserDatabase: RoomDatabase() {
 
     companion object{
         @Volatile
-        private var INSTANCE:UserDatabase? = null
+        private var INSTANCE: UserDatabase? = null
 
-        fun getDatabase(context: Context): UserDatabase{
+        fun getDatabase(context: Context): UserDatabase {
             val tempInstance = INSTANCE
             if (tempInstance!=null){
                 return tempInstance
