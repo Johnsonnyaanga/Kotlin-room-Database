@@ -20,25 +20,25 @@
         android:hint="enter firstname"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content">
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/fname"
-        android:layout_margin="@dimen/_10sdp"
-        />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fname_update"
+            android:layout_margin="@dimen/_10sdp"
+            />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:hint="enter Lastname"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content">
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-        android:id="@+id/lname"
-        android:layout_margin="@dimen/_10sdp"
-        />
+            android:id="@+id/lname_update"
+            android:layout_margin="@dimen/_10sdp"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -46,12 +46,12 @@
         android:hint="enter Age"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content">
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/age"
-        android:layout_margin="@dimen/_10sdp"
-        />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/age_update"
+            android:layout_margin="@dimen/_10sdp"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -60,11 +60,11 @@
         android:layout_height="wrap_content"
         android:elevation="2dp"
         android:padding="8dp"
-        android:text="SUBMIT"
+        android:text="UPDATE"
         android:backgroundTint="#1839EC"
         app:cornerRadius="10dp"
         android:layout_margin="@dimen/_10sdp"
-        android:id="@+id/submit"
+        android:id="@+id/submit_update"
         />
 
 

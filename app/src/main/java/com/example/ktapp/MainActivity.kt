@@ -14,6 +14,8 @@ import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
@@ -22,20 +24,14 @@ import com.google.android.material.textfield.TextInputEditText
 import java.util.zip.Inflater
 
 class MainActivity : AppCompatActivity() {
-private lateinit var addfloat: FloatingActionButton
-    private lateinit var Recycler: RecyclerView
-    private lateinit var rootLayout: RelativeLayout
-    private lateinit var mUserViewModel:UserViewModel
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-        rootLayout = findViewById(R.id.root)
-        addfloat = findViewById(R.id.add_user_float)
-        Recycler = findViewById(R.id.recycler)
+        setupActionBarWithNavController(findNavController(R.id.fragment))
 
 
 
@@ -43,19 +39,10 @@ private lateinit var addfloat: FloatingActionButton
 
 
 
-        val adapter = ListAdapter()
-        Recycler.adapter = adapter
-        Recycler.layoutManager = LinearLayoutManager(this)
-        mUserViewModel.readAllData.observe(/*viewlifecycleowner*/this, Observer {
-            user ->
-            adapter.setData(user)
-        })
 
 
-        addfloat.setOnClickListener(View.OnClickListener {
-            view ->
-            showDialog()
-        })
+
+
 
 
 
@@ -68,21 +55,19 @@ private lateinit var addfloat: FloatingActionButton
 
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        val naController = findNavController(R.id.fragment)
+        return naController.navigateUp() || super.onSupportNavigateUp()
+
+    }
+
     private fun showDialog() {
         val mDialogview = LayoutInflater.from(this).inflate(R.layout.add_user,null)
         val AlertDialogB = AlertDialog.Builder(this)
             .setView(mDialogview)
 
-        val firstname = mDialogview.findViewById<TextInputEditText>(R.id.fname)
-        val lastname = mDialogview.findViewById<TextInputEditText>(R.id.lname)
-        val age = mDialogview.findViewById<TextInputEditText>(R.id.age)
-        val submit = mDialogview.findViewById<MaterialButton>(R.id.submit)
 
-        submit.setOnClickListener(View.OnClickListener {
-                view ->
-            insertDataToDB(firstname.text.toString(),lastname.text.toString(),age.editableText)
 
-        })
 
 
 
@@ -93,21 +78,5 @@ private lateinit var addfloat: FloatingActionButton
 
     }
 
-    private fun insertDataToDB(fname:String, lname:String,age:Editable) {
 
-     if (inputCheck(fname,lname,age)){
-         val user = User(0,fname,lname,Integer.parseInt(age.toString()))
-         mUserViewModel.addUser(user)
-         Toast.makeText(this,"added succesifuly",Toast.LENGTH_LONG).show()
-
-     }else{
-         Toast.makeText(this,"Nigga insert stuff",Toast.LENGTH_LONG).show()
-     }
-
-    }
-    private fun inputCheck(firstname:String,lastname: String,age: Editable):Boolean{
-        return !(TextUtils.isEmpty(firstname) && TextUtils.isEmpty(lastname) && age.isEmpty())
-
-
-    }
 }
