@@ -24,9 +24,9 @@ class Add : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         val view = inflater.inflate(R.layout.add_user, container, false)
+        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+
 
         val firstname = view.findViewById<TextInputEditText>(R.id.fname)
         val lastname = view.findViewById<TextInputEditText>(R.id.lname)
